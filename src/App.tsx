@@ -1,3 +1,4 @@
+import DynamicPagination from "./components/DynamicPagination"
 import MyForm from "./components/MyForm"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
     <MyForm />
+    <DynamicPagination />
     </>
   )
 }
