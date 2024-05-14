@@ -60,7 +60,7 @@ const MyForm = () => {
                             picture={task.picture[0]}
                         />
                     }
-                    fileName="file.pdf"
+                    fileName="MyFile.pdf"
                 >
                     {({blob, url, loading, error}) => (loading ? 'Загрузка...' : 'Скачать')}
                 </PDFDownloadLink>
