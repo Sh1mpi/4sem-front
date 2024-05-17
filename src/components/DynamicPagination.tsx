@@ -19,7 +19,7 @@ const ListStyled = styled.div`
 `
 
 const BlockObserver = styled.div`
-    height: 100px;
+    height: 40px;
     background-color: black;
 `
 
