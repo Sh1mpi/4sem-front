@@ -1,13 +1,7 @@
 import { FC } from "react";
-import styled from "styled-components";
-import { IUniversity } from "./DynamicPagination";
+import { IUniversity } from "../models/IUniversity";
+import { CardStyled } from "./styles/styles";
 
-
-const CardStyled = styled.div`
-    height: 150px;
-    background-color: #e9e7e7;
-    color: red;
-`
 
 const CardUniversity: FC<{ data: IUniversity }> = ({data}) => (
     <CardStyled>

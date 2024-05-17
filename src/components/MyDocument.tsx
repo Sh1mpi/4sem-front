@@ -1,32 +1,16 @@
 import { Document, Image, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { FC } from "react";
-
-const styles = StyleSheet.create({
-    page: {
-        flexDirection: 'row',
-        backgroundColor: '#E4E4E4'
-    },
-    section: {
-        margin: 10,
-        padding: 10,
-        flexGrow: 1
-    }
-});
-
-
-interface IDoc {
-    name: string;
-    picture: string;
-}
+import { documentStyles } from "./styles/styles";
+import { IDoc } from "../models/IDoc";
 
 const  MyDocument: FC<IDoc> = ({ name, picture }) => {
     return (
         <Document>
-            <Page size="A4" style={styles.page} wrap>
-                <View style={styles.section}>
+            <Page size="A4" style={documentStyles.page} wrap>
+                <View style={documentStyles.section}>
                     <Text>{name}</Text>
                 </View>
-                <View style={styles.section}>
+                <View style={documentStyles.section}>
                     {picture && <Image src={picture} />}
                     </View>
             </Page>

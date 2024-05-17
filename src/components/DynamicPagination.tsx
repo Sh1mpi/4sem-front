@@ -2,26 +2,12 @@ import {FC, useEffect, useState} from "react";
 import CardUniversity from "./CardUniversity";
 import {useInView} from 'react-intersection-observer';
 import axios from "axios";
-import styled from "styled-components";
+import { BlockObserver, ListStyled } from "./styles/styles";
+import { IUniversity } from "../models/IUniversity";
 
 
 const LIMIT_UNIVERSITIES = 15;
 
-export interface IUniversity {
-    country: string;
-    name: string;
-}
-
-const ListStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-`
-
-const BlockObserver = styled.div`
-    height: 40px;
-    background-color: black;
-`
 
 const DynamicPagination: FC = () => {
     const [universities, setUniversities] = useState<Array<IUniversity>>([]);

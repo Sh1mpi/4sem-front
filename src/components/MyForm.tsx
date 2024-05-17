@@ -2,13 +2,9 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useState } from "react";
 import { useForm } from "react-hook-form"
 import MyDocument from "./MyDocument";
+import { IMyForm } from "../models/IMyForm";
 
 const MyForm = () => {
-
-    interface IMyForm {
-        name: string;
-        picture: string;
-    }
 
     const [task, setTask] = useState<IMyForm>()
 
