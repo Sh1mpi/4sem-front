@@ -58,7 +58,7 @@ const MyForm = () => {
                     }
                     fileName="MyFile.pdf"
                 >
-                    {({blob, url, loading, error}) => (loading ? 'Загрузка...' : 'Скачать')}
+                    {({loading}) => (loading ? 'Загрузка...' : 'Скачать')}
                 </PDFDownloadLink>
             }
 </div>

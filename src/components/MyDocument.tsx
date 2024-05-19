@@ -1,4 +1,4 @@
-import { Document, Image, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Document, Image, Page, Text, View } from "@react-pdf/renderer";
 import { FC } from "react";
 import { documentStyles } from "./styles/styles";
 import { IDoc } from "../models/IDoc";
@@ -11,7 +11,7 @@ const  MyDocument: FC<IDoc> = ({ name, picture }) => {
                     <Text>{name}</Text>
                 </View>
                 <View style={documentStyles.section}>
-                    {picture && <Image src={picture} />}
+                    {picture && <Image source={picture} />}
                     </View>
             </Page>
         </Document>
