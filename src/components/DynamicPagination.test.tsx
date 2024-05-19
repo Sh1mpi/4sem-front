@@ -1,5 +1,3 @@
-// src/components/DynamicPagination.test.tsx
-
 import { describe, it, expect, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import axios from "axios";
@@ -7,8 +5,6 @@ import DynamicPagination from "./DynamicPagination";
 import { IUniversity } from "../models/IUniversity";
 import 'intersection-observer';
 
-
-// Мокируем модуль axios
 vi.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
